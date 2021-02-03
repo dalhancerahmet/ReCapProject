@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entitites;
+using Entitites.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,6 @@ namespace DataAccess.Concrete.InMemory
 
              };
         }
-
         public void Add(Car car)
         {
             _cars.Add(car);

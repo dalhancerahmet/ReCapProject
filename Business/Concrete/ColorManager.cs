@@ -1,43 +1,42 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
-using Entitites;
+using Entitites.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Business.Concrete
 {
-    public class CarManager : ICarService
+    public class ColorManager : IColorService
     {
-        ICarDal _carDal;
-        
+        IColorDal _colorDals;
 
-        public CarManager(ICarDal carDal)
+        public ColorManager(IColorDal colorDals)
         {
-            _carDal = carDal;
+            _colorDals = colorDals;
         }
 
-        public void Add(Car car)
-        {
-            _carDal.Add(car);
-        }
-
-        public void Delete(Car car)
+        public void Add()
         {
             throw new NotImplementedException();
         }
 
-        public List<Car> GetAll()
-        {
-           return _carDal.GetAll();
-        }
-
-        public Car GetById()
+        public void Delete()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Car car)
+        public List<Color> GetAll()
+        {
+            return _colorDals.GetAll();
+        }
+
+        public Color GetById()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
         {
             throw new NotImplementedException();
         }
